@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ception\\Documents\\MEGA\\Development\\WonderKing\\WonderKingNA\\WonderKingNA\\WonderKingNA.csproj",
+      "projectUniqueName": "C:\\Users\\Ception\\Documents\\MEGA\\Development\\WonderKing\\WonderKingCollab\\WonderKingNA\\WonderKingNA\\WonderKingNA.csproj",
       "projectName": "WonderKingNA",
-      "projectPath": "C:\\Users\\Ception\\Documents\\MEGA\\Development\\WonderKing\\WonderKingNA\\WonderKingNA\\WonderKingNA.csproj",
+      "projectPath": "C:\\Users\\Ception\\Documents\\MEGA\\Development\\WonderKing\\WonderKingCollab\\WonderKingNA\\WonderKingNA\\WonderKingNA.csproj",
       "packagesPath": "C:\\Users\\Ception\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ception\\Documents\\MEGA\\Development\\WonderKing\\WonderKingNA\\WonderKingNA\\obj\\",
+      "outputPath": "C:\\Users\\Ception\\Documents\\MEGA\\Development\\WonderKing\\WonderKingCollab\\WonderKingNA\\WonderKingNA\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ception\\AppData\\Roaming\\NuGet\\NuGet.Config",
