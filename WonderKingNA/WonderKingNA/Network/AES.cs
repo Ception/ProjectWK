@@ -2,9 +2,9 @@
 
 namespace WonderKingNA.Network {
     internal class AES {
-        private static readonly byte[] Key = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7 };
-        private static readonly byte[] Encryption = new byte[176];
-        private static readonly byte[] Decryption = new byte[176];
+        private static readonly byte[] KEY = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7 };
+        private static readonly byte[] ENCRYPTION = new byte[176];
+        private static readonly byte[] DECRYPTION = new byte[176];
 
         #region Magic Data
         private static int[] Rcon = new int[] {
@@ -344,11 +344,11 @@ namespace WonderKingNA.Network {
         };
         #endregion
 
-        private static long rot_w (long w) {
+        private static long Rot_w (long w) {
             return ((w << 8) | (w >> 24)) & 0xFFFFFFFFL;
         }
 
-        private static int sub_w(long w) {
+        private static int Sub_w(long w) {
             return (SBox[(int)(w >> 24) & 0xff] << 24) |
                     (SBox[(int)(w >> 16) & 0xff] << 16) |
                     (SBox[(int)(w >> 8) & 0xff] << 8) |
@@ -357,60 +357,60 @@ namespace WonderKingNA.Network {
 
         public void ExpandKey() {
             int i;
-            int nk = Key.Length / 4;
+            int nk = KEY.Length / 4;
 
             // a ByteBuffer reads in big endian
-            EndianReader key = new EndianReader(Key);
-            EndianReader enc = new EndianReader(Encryption);
-            EndianReader dec = new EndianReader(Decryption);
+            EndianReader key = new EndianReader(KEY);
+            EndianReader enc = new EndianReader(ENCRYPTION);
+            EndianReader dec = new EndianReader(DECRYPTION);
 
             for (i = 0; i < nk; i++) {
-                enc.writeInt(i * 4, (int)key.readUnsignedInt(i * 4));
+                enc.WriteInt(i * 4, (int)key.ReadUnsignedInt(i * 4));
             }
             for (; i < 176 / 4; i++) {
-                long t = enc.readUnsignedInt((i - 1) * 4);
+                long t = enc.ReadUnsignedInt((i - 1) * 4);
                 if (i % nk == 0)
-                    t = (long)(sub_w(rot_w(t))) ^ (Rcon[i / nk] << 24); // supposed to be (ulong) but compiling throwing a shit.. might have to come back to this.
+                    t = (long)(Sub_w(Rot_w(t))) ^ (Rcon[i / nk] << 24); // supposed to be (ulong) but compiling throwing a shit.. might have to come back to this.
 
-                long value = enc.readUnsignedInt((i - nk) * 4) ^ t;
-                enc.writeInt(i * 4, (int)value);
+                long value = enc.ReadUnsignedInt((i - nk) * 4) ^ t;
+                enc.WriteInt(i * 4, (int)value);
             }
             int n = 44;
             for (i = 0; i < n; i += 4) {
                 int ei = n - i - 4;
                 for (int j = 0; j < 4; j++) {
-                    long x = enc.readUnsignedInt((ei + j) * 4);
+                    long x = enc.ReadUnsignedInt((ei + j) * 4);
                     if (i > 0 && i + 4 < n) {
                         x = td[0][SBox[(int)((x >> 24) & 0xff)]]
                                 ^ td[1][SBox[(int)((x >> 16) & 0xff)]]
                                 ^ td[2][SBox[(int)((x >> 8) & 0xff)]]
                                 ^ td[3][SBox[(int)(x & 0xff)]];
                     }
-                    dec.writeInt((i + j) * 4, (int)x);
+                    dec.WriteInt((i + j) * 4, (int)x);
                 }
             }
         }
 
-        public static void decrypt(byte[] buffer) {
+        public static void Decrypt(byte[] buffer) {
             long s0, s1, s2, s3,
                     t0 = 0, t1 = 0, t2 = 0, t3 = 0;
 
-            EndianReader dec = new EndianReader(Decryption);
+            EndianReader dec = new EndianReader(DECRYPTION);
             EndianReader packet = new EndianReader(buffer);
 
             int pos, end = buffer.Length - (buffer.Length % 16);
             for (pos = 0; pos < end; pos += 16) {
-                s0 = packet.readUnsignedInt(pos) ^ dec.readUnsignedInt(0);
-                s1 = packet.readUnsignedInt(pos + 4) ^ dec.readUnsignedInt(4);
-                s2 = packet.readUnsignedInt(pos + 8) ^ dec.readUnsignedInt(8);
-                s3 = packet.readUnsignedInt(pos + 12) ^ dec.readUnsignedInt(12);
+                s0 = packet.ReadUnsignedInt(pos) ^ dec.ReadUnsignedInt(0);
+                s1 = packet.ReadUnsignedInt(pos + 4) ^ dec.ReadUnsignedInt(4);
+                s2 = packet.ReadUnsignedInt(pos + 8) ^ dec.ReadUnsignedInt(8);
+                s3 = packet.ReadUnsignedInt(pos + 12) ^ dec.ReadUnsignedInt(12);
 
                 int nr = 9, k = 16;
                 for (int i = 0; i < nr; i++) {
-                    t0 = dec.readUnsignedInt(k) ^ td[0][(int)(s0 >> 24) & 0xFF] ^ td[1][(int)(s3 >> 16) & 0xFF] ^ td[2][(int)(s2 >> 8) & 0xFF] ^ td[3][(int)(s1 & 0xFF)];
-                    t1 = dec.readUnsignedInt(k + 4) ^ td[0][(int)(s1 >> 24) & 0xFF] ^ td[1][(int)(s0 >> 16) & 0xFF] ^ td[2][(int)(s3 >> 8) & 0xFF] ^ td[3][(int)(s2 & 0xFF)];
-                    t2 = dec.readUnsignedInt(k + 8) ^ td[0][(int)(s2 >> 24) & 0xFF] ^ td[1][(int)(s1 >> 16) & 0xFF] ^ td[2][(int)(s0 >> 8) & 0xFF] ^ td[3][(int)(s3 & 0xFF)];
-                    t3 = dec.readUnsignedInt(k + 12) ^ td[0][(int)(s3 >> 24) & 0xFF] ^ td[1][(int)(s2 >> 16) & 0xFF] ^ td[2][(int)(s1 >> 8) & 0xFF] ^ td[3][(int)(s0 & 0xFF)];
+                    t0 = dec.ReadUnsignedInt(k) ^ td[0][(int)(s0 >> 24) & 0xFF] ^ td[1][(int)(s3 >> 16) & 0xFF] ^ td[2][(int)(s2 >> 8) & 0xFF] ^ td[3][(int)(s1 & 0xFF)];
+                    t1 = dec.ReadUnsignedInt(k + 4) ^ td[0][(int)(s1 >> 24) & 0xFF] ^ td[1][(int)(s0 >> 16) & 0xFF] ^ td[2][(int)(s3 >> 8) & 0xFF] ^ td[3][(int)(s2 & 0xFF)];
+                    t2 = dec.ReadUnsignedInt(k + 8) ^ td[0][(int)(s2 >> 24) & 0xFF] ^ td[1][(int)(s1 >> 16) & 0xFF] ^ td[2][(int)(s0 >> 8) & 0xFF] ^ td[3][(int)(s3 & 0xFF)];
+                    t3 = dec.ReadUnsignedInt(k + 12) ^ td[0][(int)(s3 >> 24) & 0xFF] ^ td[1][(int)(s2 >> 16) & 0xFF] ^ td[2][(int)(s1 >> 8) & 0xFF] ^ td[3][(int)(s0 & 0xFF)];
                     k += 16;
                     s0 = t0;
                     s1 = t1;
@@ -443,21 +443,21 @@ namespace WonderKingNA.Network {
                     (byte) SBox2[(int) t0 & 0xFF]};
                 s3 = ByteArray.toBEUnsignedInt(temp);
 
-                packet.writeInt(pos, (int)(s0 ^ dec.readUnsignedInt(k)));
-                packet.writeInt(pos + 4, (int)(s1 ^ dec.readUnsignedInt(k + 4)));
-                packet.writeInt(pos + 8, (int)(s2 ^ dec.readUnsignedInt(k + 8)));
-                packet.writeInt(pos + 12, (int)(s3 ^ dec.readUnsignedInt(k + 12)));
+                packet.WriteInt(pos, (int)(s0 ^ dec.ReadUnsignedInt(k)));
+                packet.WriteInt(pos + 4, (int)(s1 ^ dec.ReadUnsignedInt(k + 4)));
+                packet.WriteInt(pos + 8, (int)(s2 ^ dec.ReadUnsignedInt(k + 8)));
+                packet.WriteInt(pos + 12, (int)(s3 ^ dec.ReadUnsignedInt(k + 12)));
             }
             if (pos != buffer.Length) {
                 // [00835280]
                 for (int i = 0; i < buffer.Length - pos; i++) {
-                    packet.writeByte(end + i, (byte)(packet.readByte(end + i) ^ test[i]));
+                    packet.writeByte(end + i, (byte)(packet.ReadByte(end + i) ^ Test[i]));
                 }
             }
-            Array.Copy(packet.array(), 0, buffer, 0, buffer.Length);
+            Array.Copy(packet.CopyBufferArray(), 0, buffer, 0, buffer.Length);
         }
 
-        private static byte[] test = new byte[]{
+        private static byte[] Test = new byte[]{
             (byte) 0xFE, (byte) 0xDC, (byte) 0xBA, (byte) 0x98, 0x76, 0x54, 0x32, 0x10, 0x0F, 0x1E, 0x2D, 0x3C, 0x4B, 0x5A, 0x69, 0x78
         };
     }

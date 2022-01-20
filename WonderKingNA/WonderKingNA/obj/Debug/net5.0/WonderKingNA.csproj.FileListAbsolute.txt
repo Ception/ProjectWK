@@ -1,0 +1,16 @@
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\obj\Debug\net5.0\WonderKingNA.csproj.AssemblyReference.cache
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\obj\Debug\net5.0\WonderKingNA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\obj\Debug\net5.0\WonderKingNA.AssemblyInfoInputs.cache
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\obj\Debug\net5.0\WonderKingNA.AssemblyInfo.cs
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\obj\Debug\net5.0\WonderKingNA.csproj.CoreCompileInputs.cache
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\bin\Debug\net5.0\WonderKingNA.exe
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\bin\Debug\net5.0\WonderKingNA.deps.json
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\bin\Debug\net5.0\WonderKingNA.runtimeconfig.json
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\bin\Debug\net5.0\WonderKingNA.runtimeconfig.dev.json
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\bin\Debug\net5.0\WonderKingNA.dll
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\bin\Debug\net5.0\ref\WonderKingNA.dll
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\bin\Debug\net5.0\WonderKingNA.pdb
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\obj\Debug\net5.0\WonderKingNA.dll
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\obj\Debug\net5.0\ref\WonderKingNA.dll
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\obj\Debug\net5.0\WonderKingNA.pdb
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\obj\Debug\net5.0\WonderKingNA.genruntimeconfig.cache
