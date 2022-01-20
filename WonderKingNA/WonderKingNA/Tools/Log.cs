@@ -9,7 +9,7 @@ namespace WonderKingNA.Tools {
 
             Console.Title = "WonderKing Online";
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("[{0}][{1}]\t", displayTime, date);
+            Console.Write($"[{displayTime}][{date}]");
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(msg);
         }
@@ -21,7 +21,7 @@ namespace WonderKingNA.Tools {
 
             Console.Title = "WonderKing Online";
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("[{0}][{1}]\t", displayTime, date);
+            Console.Write($"[{displayTime}][{date}]");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(msg);
         }
@@ -33,7 +33,7 @@ namespace WonderKingNA.Tools {
 
             Console.Title = "WonderKing Online";
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("[{0}][{1}]\t", displayTime, date);
+            Console.Write($"[{displayTime}][{date}]");
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(msg);
         }
@@ -45,7 +45,7 @@ namespace WonderKingNA.Tools {
 
             Console.Title = "WonderKing Online";
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("[TEST][{0}][{1}]\t", displayTime, date);
+            Console.Write($"[{displayTime}][{date}]");
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("Testing.");
         }
@@ -57,7 +57,7 @@ namespace WonderKingNA.Tools {
 
             Console.Title = "WonderKing Online";
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("[TEST][{0}][{1}]\t", displayTime, date);
+            Console.Write($"[{displayTime}][{date}]");
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine(msg);
         }
@@ -69,7 +69,7 @@ namespace WonderKingNA.Tools {
 
             Console.Title = "WonderKing Online";
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("[TEST][{0}][{1}]\t", displayTime, date);
+            Console.Write($"[{displayTime}][{date}]");
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine(msg);
         }
@@ -81,7 +81,7 @@ namespace WonderKingNA.Tools {
 
             Console.Title = "WonderKing Online";
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("[TEST][{0}][{1}]\t", displayTime, date);
+            Console.Write($"[{displayTime}][{date}]");
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine(msg, msg2, msg3);
         }
@@ -93,7 +93,7 @@ namespace WonderKingNA.Tools {
 
             Console.Title = "WonderKing Online";
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("[{0}][{1}]\t", displayTime, date);
+            Console.Write($"[{displayTime}][{date}]");
             Console.ForegroundColor = color;
             Console.WriteLine(msg);
         }
@@ -105,7 +105,7 @@ namespace WonderKingNA.Tools {
 
             Console.Title = "WonderKing Online";
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("[{0}][{1}]\t", displayTime, date);
+            Console.Write($"[{displayTime}][{date}]");
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(msg);
         }
@@ -117,7 +117,7 @@ namespace WonderKingNA.Tools {
 
             Console.Title = "WonderKing Online";
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("[{0}][{1}]\t", displayTime, date);
+            Console.Write($"[{displayTime}][{date}]");
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(msg, args);
         }
@@ -129,7 +129,7 @@ namespace WonderKingNA.Tools {
 
             Console.Title = "WonderKing Online";
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("[{0}][{1}]\t", displayTime, date);
+            Console.Write($"[{displayTime}][{date}]");
             Console.ForegroundColor = color;
             Console.WriteLine(msg, args);
         }
