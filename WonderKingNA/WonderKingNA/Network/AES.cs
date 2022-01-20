@@ -1,10 +1,16 @@
 ﻿using System;
+using WonderKingNA.Tools;
 
 namespace WonderKingNA.Network {
     internal class AES {
         private static readonly byte[] KEY = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7 };
         private static readonly byte[] ENCRYPTION = new byte[176];
         private static readonly byte[] DECRYPTION = new byte[176];
+
+        public AES() {
+            ExpandKey();
+            Log.ConsoleMessage("[AES] Cryptography Initialized!");
+        }
 
         #region Magic Data
         private static int[] Rcon = new int[] {

@@ -3,8 +3,10 @@
 namespace WonderKingNA {
     internal class Program {
         static void Main() {
-            Console.Title = "Wonderking Online MMORPG - North America";
+            WonderKingWorker wk = new WonderKingWorker();
+            wk.Run();
 
+            Console.Title = "Wonderking Online MMORPG - North America";
             Console.ReadKey();
         }
     }
