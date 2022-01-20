@@ -9,7 +9,7 @@ namespace WonderKingNA.Network {
 
         public AES() {
             ExpandKey();
-            Log.ConsoleMessage("[AES] Cryptography Initialized!");
+            Log.ConsoleMessage("[AES] Initialized.");
         }
 
         #region Magic Data
@@ -350,7 +350,7 @@ namespace WonderKingNA.Network {
         };
         #endregion
 
-        private static long Rot_w (long w) {
+        private static long Rot_w(long w) {
             return ((w << 8) | (w >> 24)) & 0xFFFFFFFFL;
         }
 

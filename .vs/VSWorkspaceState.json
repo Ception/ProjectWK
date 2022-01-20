@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\WonderKingNA",
+    "\\WonderKingNA\\WonderKingNA",
+    "\\WonderKingNA\\WonderKingNA\\Network"
   ],
-  "SelectedNode": "\\WonderKingNA.sln",
+  "SelectedNode": "\\WonderKingNA\\WonderKingNA\\Network\\EndianReader.cs",
   "PreviewInSolutionExplorer": false
 }

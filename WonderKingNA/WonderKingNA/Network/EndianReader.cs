@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 using System.Text;
 using WonderKingNA.Tools;
 
@@ -87,7 +86,7 @@ namespace WonderKingNA.Network {
          * @return unsigned int (int32)
          */
         public long ReadUnsignedInt(int index) {
-            return  (Convert.ToUInt16(ReadByte(index))
+            return (Convert.ToUInt16(ReadByte(index))
                   + (ReadByte(index + 1) << Convert.ToUInt16(8L))
                   + (ReadByte(index + 2) << Convert.ToUInt16(16L))
                   + (ReadByte(index + 3) << Convert.ToUInt16(24L)));
