@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Text;
+using WonderKingNA.Tools;
 
 namespace WonderKingNA.Network {
     internal class EndianReader {
@@ -36,7 +37,7 @@ namespace WonderKingNA.Network {
         public byte[] CopyBufferArray() { // I think i fixed it??
             byte[] dest = new byte[Convert.ToByte(buf)];
             Array.Copy(buf, dest, dest.Length);
-            Console.WriteLine("Copying Buffer Array EndianReader.cs LINE 36"); // for debugging
+            Log.ConsoleWarning("Copying Buffer Array EndianReader.cs LINE 36"); // for debugging
             return dest;
         }
 
