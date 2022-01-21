@@ -9,7 +9,7 @@ namespace WonderKingNA {
             try {
                 new AES();
                 new Database();
-            } catch (Exception ex) {
+            } catch (Exception ex) { // threw new exception(ex.tostring()) and break;
                 Log.ConsoleError($"[SERVER] \tERROR: Starting Server. Error:\n\n\t{ex.ToString()}\n\n\t");
                 Log.ConsoleError("[SERVER] \tERROR: Server Not Started.");
             } finally {
