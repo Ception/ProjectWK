@@ -39,7 +39,7 @@ namespace WonderKingNA.Tools {
             } catch(MySqlException ex) {
                 //0: Cannot connect to server.
                 //1045: Invalid user name and/or password.
-                switch (ex.Number) { //test
+                switch (ex.Number) {
                     case 0:
                         Log.ConsoleError("[DATABASE] \tERROR: Cannot Connect to Database Server.");
                         break;
