@@ -27,3 +27,4 @@ C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKi
 C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\obj\Debug\net5.0\ref\WonderKingNA.dll
 C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\obj\Debug\net5.0\WonderKingNA.pdb
 C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\obj\Debug\net5.0\WonderKingNA.genruntimeconfig.cache
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\obj\Debug\net5.0\WonderKingNA.csproj.AssemblyReference.cache

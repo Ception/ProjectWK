@@ -9,7 +9,7 @@ namespace WonderKingNA.Network {
 
         public AES() {
             ExpandKey();
-            Log.ConsoleMessage("[AES] Initialized.");
+            Log.ConsoleMessage("[AES] \t\tSUCCESS: Initialized.");
         }
 
         #region Magic Data
