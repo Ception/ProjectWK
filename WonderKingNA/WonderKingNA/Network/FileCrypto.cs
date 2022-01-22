@@ -59,7 +59,7 @@ namespace WonderKingNA.Network {
         private static Boolean NeedsDecode(byte[] buf) {
             long magic = 0;
             foreach (byte b in buf) {
-                if ((b & 0xff) == 0xc5) magic++;
+                if ((b & 0xff) == 0xff) magic++;
             }
             return (magic / (float)buf.Length) > 0.3; // 0.3
         }
