@@ -15,7 +15,7 @@ namespace WonderKingNA.Tools {
             Init();
         }
 
-        private void Init() {
+        public void Init() {
             Settings s = new Settings();
 
             this.server = s.GetDatabaseServerIP;

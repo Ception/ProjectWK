@@ -8,7 +8,7 @@ namespace WonderKingNA.Network {
         private static readonly byte[] DECRYPTION = new byte[176];
 
         public AES() {
-            ExpandKey();
+            Init();
             Log.ConsoleMessage("[AES] \t\tSUCCESS: Initialized.");
         }
 
@@ -361,7 +361,7 @@ namespace WonderKingNA.Network {
                     (SBox[(int)(w & 0xff)]);
         }
 
-        public void ExpandKey() {
+        public void Init() {
             int i;
             int nk = KEY.Length / 4;
 
