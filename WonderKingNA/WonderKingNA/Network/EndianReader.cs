@@ -137,7 +137,7 @@ namespace WonderKingNA.Network {
 
         public void Skip(int num) {
             if (num + index < 0 || num > buf.Length) {
-                throw new ArgumentException("cannot skip beyond packet length or below 0");
+                throw new Exception("cannot skip beyond packet length or below 0");
             }
             index += num;
         }
@@ -157,10 +157,10 @@ namespace WonderKingNA.Network {
             return dest;
         }
 
-        public String ReadAsciiString(int size) {
-            Encoding encoding = Encoding.GetEncoding(CODEPAGE);
+        public string ReadAsciiString(int size) { // may have to come back to this
+            Encoding enc = Encoding.GetEncoding(CODEPAGE);
             size = Convert.ToInt32(Read(size));
-            return new String(Convert.ToChar(size), Convert.ToInt32(encoding));
+            return new string(Convert.ToChar(size), Convert.ToInt32(enc));
         }
 
         public float ReadFloat() {
