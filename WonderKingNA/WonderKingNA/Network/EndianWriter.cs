@@ -96,12 +96,12 @@ namespace WonderKingNA.Network {
             ms.WriteByte((byte)((l >> 56) & 0xFF));
         }
 
-        public void WriteFloat(float v) { // No idea what I did here, might have to come back to it
-            byte[] floatBytes = BitConverter.GetBytes(v);
-            ms.WriteByte((byte)(Convert.ToInt32(floatBytes) & 0xff));
-            ms.WriteByte((byte)((Convert.ToInt32(floatBytes) >> 8) & 0xff));
-            ms.WriteByte((byte)((Convert.ToInt32(floatBytes) >> 16) & 0xff));
-            ms.WriteByte((byte)((Convert.ToInt32(floatBytes) >> 24) & 0xff));
+        public void WriteFloat(float v) {
+            int bits = BitConverter.ToInt32(BitConverter.GetBytes(v), 0);
+            ms.WriteByte((byte)(bits & 0xff));
+            ms.WriteByte((byte)((bits >> 8) & 0xff));
+            ms.WriteByte((byte)((bits >> 16) & 0xff));
+            ms.WriteByte((byte)((bits >> 24) & 0xff));
         }
     }
 }
