@@ -15,6 +15,7 @@ namespace WonderKingNA.Tools {
         private const int loginServerPort =     10001;
         private const int gameServerPort =      10002;
         private const int connectionsAllowed =  5;
+        private const int channels =            1;
 
         public Settings() {
             // If file doesn't exist, create it, then initialize.
@@ -38,6 +39,7 @@ namespace WonderKingNA.Tools {
             ini.Write("GAME", "Login_Port", loginServerPort);
             ini.Write("GAME", "Game_Port", gameServerPort);
             ini.Write("GAME", "Connections_Allowed", connectionsAllowed);
+            ini.Write("GAME", "Channels", channels);
 
             Log.ConsoleMessage("[SETTINGS] \tInitialized. Written to file.");
         }
@@ -72,6 +74,10 @@ namespace WonderKingNA.Tools {
         
         public int GetGameAconnectionsAllowed {
             get { return Convert.ToInt32(ini.Read("GAME", "Connections_Allowed")); }
+        }
+
+        public int GetNumberOfChannels {
+            get { return Convert.ToInt32(ini.Read("GAME", "Channels")); }
         }
     }
 }

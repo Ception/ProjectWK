@@ -6,6 +6,7 @@ using WonderKingNA.Tools;
 namespace WonderKingNA {
     internal class WonderKingWorker {
         private int connectionsAllowed;
+        private int channelsUp;
 
         public void Run() {
             new Settings();
@@ -15,7 +16,9 @@ namespace WonderKingNA {
 
             Settings s = new Settings();
             this.connectionsAllowed = s.GetGameAconnectionsAllowed;
+            this.channelsUp = s.GetNumberOfChannels;
             Log.ConsoleMessage($"[GAME_SERVER] \tTotal Connections Allowed: {connectionsAllowed}");
+            Log.ConsoleMessage($"[GAME_SERVER] \tTotal Active Channels: {channelsUp}");
 
             Console.ReadKey();
         }

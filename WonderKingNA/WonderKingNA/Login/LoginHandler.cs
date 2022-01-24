@@ -34,7 +34,7 @@ namespace WonderKingNA.Login {
 
         public static EndianWriter GetSelectPlayer(Player player) {
             EndianWriter w = new EndianWriter();
-            w.WriteShort((int)PacketOpcodes.id);
+            w.WriteShort(PacketOpcodes.id);
             w.WriteShort(0);
             //w.WriteAsciiString(player.GetPassword(), 32);
             w.Write(0);
