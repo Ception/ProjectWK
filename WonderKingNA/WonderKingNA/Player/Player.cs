@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static WonderKingNA.Player.Classes;
+using static WonderKingNA.User.Classes;
 
-namespace WonderKingNA.Player {
+namespace WonderKingNA.User {
     internal class Player {
         private string Name;
         private byte Level;

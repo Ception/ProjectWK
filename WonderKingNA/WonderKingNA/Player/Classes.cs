@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WonderKingNA.Player {
+namespace WonderKingNA.User {
     internal class Classes {
         public enum FirstJob {
             NULL,
-            Swordsman = 1,
+            Swordsman,
             Mage,
             Thief,
             Scout,
         }
 
         public enum SecondJob {
-            Warrior = 5,
+            Warrior,
             Knight, //6
             Priest, //7	
             Wizard, //8
@@ -26,7 +26,7 @@ namespace WonderKingNA.Player {
         }
 
         public enum ThirdJob {
-            Berserker = 13,
+            Berserker,
             Pladin,
             Saint, 
             Warlock,	
@@ -38,7 +38,7 @@ namespace WonderKingNA.Player {
 
 
         public enum FourthJob {
-            Juggernaut = 21,
+            Juggernaut,
             Temple_Knight,
             Exorcist,
             Necromancer,
