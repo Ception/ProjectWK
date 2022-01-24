@@ -31,7 +31,7 @@ namespace WonderKingNA.Login {
 
                 Log.ConsoleMessage("[LOGIN_SERVER] \tSUCCESS: Initialized.");
             } catch (Exception ex) {
-                Log.ConsoleError("[LOGIN_SERVER] \tERROR: Failed to Initialize.");
+                Log.ConsoleError("[LOGIN_SERVER_ERROR] \tFailed to Initialize.");
                 Log.ConsoleError($"[LOGIN_SERVER_ERROR] \t{ex}");
                 return;
             }

@@ -7,9 +7,10 @@ namespace WonderKingNA {
     internal class WonderKingWorker {
 
         public void Run() {
+            new Settings();
             new AES();
             new Database();
-            new LoginServer();
+            //new LoginServer();
 
             Console.ReadKey();
         }

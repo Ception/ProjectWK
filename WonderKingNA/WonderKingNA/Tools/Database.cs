@@ -35,7 +35,7 @@ namespace WonderKingNA.Tools {
             if (isOpen) {
                 Log.ConsoleMessage("[DATABASE] \tSUCCESS: Initialized.");
             } else {
-                Log.ConsoleError("[DATABASE] \tERROR: Failed to Initialize.");
+                Log.ConsoleError("[DATABASE_ERROR] \tFailed to Initialize.");
             }
         }
 
@@ -49,10 +49,10 @@ namespace WonderKingNA.Tools {
                 //1045: Invalid user name and/or password.
                 switch (ex.Number) {
                     case 0:
-                        Log.ConsoleError("[DATABASE] \tERROR: Cannot Connect to Database Server.");
+                        Log.ConsoleError("[DATABASE_ERROR] \tCannot Connect to Database Server.");
                         break;
                     case 1045:
-                        Log.ConsoleError("[DATABASE] \tERROR: Wrong Username/Password.");
+                        Log.ConsoleError("[DATABASE_ERROR] \tWrong Username/Password.");
                         break;
                 }
                 return false;

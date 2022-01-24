@@ -14,11 +14,15 @@ namespace WonderKingNA.Tools {
         private const string serverIP =         "localhost";
         private const int loginServerPort =     10001;
         private const int gameServerPort =      10002;
-        private const int connectionsAllowed = 5;
+        private const int connectionsAllowed =  5;
 
         public Settings() {
+            // If file doesn't exist, create it, then initialize.
+            if (!File.Exists(filePath)) {
+                File.Create(filePath).Close();
+                Init();
             // If file is empty, THEN initilize.
-            if (new FileInfo(filePath).Length == 0 || !File.Exists(filePath)) {
+            } else if (new FileInfo(filePath).Length == 0 || !File.Exists(filePath)) {
                 Init();
             }
         }
@@ -26,15 +30,6 @@ namespace WonderKingNA.Tools {
         private INIFile ini = new INIFile(filePath);
 
         private void Init() {
-            List<string> onlyAllowedWords = new List<string> {  "DATABASE", 
-                                                                "Server_IP",
-                                                                "Name",
-                                                                "Username",
-                                                                "Password",
-                                                                "GAME",
-                                                                "Login_Port",
-                                                                "Game_Port" };
-
             ini.Write("DATABASE", "Server_IP", databaseServer);
             ini.Write("DATABASE", "Name", databaseName);
             ini.Write("DATABASE", "Username", databaseUsername);
@@ -43,6 +38,8 @@ namespace WonderKingNA.Tools {
             ini.Write("GAME", "Login_Port", loginServerPort);
             ini.Write("GAME", "Game_Port", gameServerPort);
             ini.Write("GAME", "Connections_Allowed", connectionsAllowed);
+
+            Log.ConsoleMessage("[SETTINGS] \tInitialized. Written to file.");
         }
 
         public string GetDatabaseServerIP {
