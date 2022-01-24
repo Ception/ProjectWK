@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WonderKingNA.User {
+namespace WonderKingNA.PlayerUser {
     internal class Classes {
         public enum FirstJob {
             NULL,

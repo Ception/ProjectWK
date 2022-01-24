@@ -1,94 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {
-      "log4net/2.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-full/log4net.dll": {}
-        },
-        "runtime": {
-          "lib/net40-full/log4net.dll": {}
-        }
-      },
-      "SuperSocket/1.6.6.1": {
-        "type": "package",
-        "dependencies": {
-          "log4net": "2.0.3"
-        },
-        "compile": {
-          "lib/net45/SuperSocket.Common.dll": {},
-          "lib/net45/SuperSocket.Facility.dll": {},
-          "lib/net45/SuperSocket.SocketBase.dll": {}
-        },
-        "runtime": {
-          "lib/net45/SuperSocket.Common.dll": {},
-          "lib/net45/SuperSocket.Facility.dll": {},
-          "lib/net45/SuperSocket.SocketBase.dll": {}
-        }
-      }
-    }
+    "net5.0": {}
   },
-  "libraries": {
-    "log4net/2.0.3": {
-      "sha512": "rxMHzK5efGPo5XtRnuUGO4tfW5l74Aji6kVmtMAt2SgcB5PHBNtNY7yj2LCI2VtKrLPO7kCKR6kH6lIZggq3Gg==",
-      "type": "package",
-      "path": "log4net/2.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net10-full/log4net.dll",
-        "lib/net10-full/log4net.xml",
-        "lib/net11-full/log4net.dll",
-        "lib/net11-full/log4net.xml",
-        "lib/net20-full/log4net.dll",
-        "lib/net20-full/log4net.xml",
-        "lib/net35-client/log4net.dll",
-        "lib/net35-client/log4net.xml",
-        "lib/net35-full/log4net.dll",
-        "lib/net35-full/log4net.xml",
-        "lib/net40-client/log4net.dll",
-        "lib/net40-client/log4net.xml",
-        "lib/net40-full/log4net.dll",
-        "lib/net40-full/log4net.xml",
-        "log4net.2.0.3.nupkg.sha512",
-        "log4net.nuspec"
-      ]
-    },
-    "SuperSocket/1.6.6.1": {
-      "sha512": "mowf1siOQwqxQH+FE+UO9b29GjHEtT/p5rxTHvcgfaIdwcRqMUAzEJELBA/M8wDn/BIE/XMojeyNaoqfGECX8A==",
-      "type": "package",
-      "path": "supersocket/1.6.6.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net35/SuperSocket.Common.XML",
-        "lib/net35/SuperSocket.Common.dll",
-        "lib/net35/SuperSocket.Facility.XML",
-        "lib/net35/SuperSocket.Facility.dll",
-        "lib/net35/SuperSocket.SocketBase.XML",
-        "lib/net35/SuperSocket.SocketBase.dll",
-        "lib/net40/SuperSocket.Common.XML",
-        "lib/net40/SuperSocket.Common.dll",
-        "lib/net40/SuperSocket.Facility.XML",
-        "lib/net40/SuperSocket.Facility.dll",
-        "lib/net40/SuperSocket.SocketBase.XML",
-        "lib/net40/SuperSocket.SocketBase.dll",
-        "lib/net45/SuperSocket.Common.XML",
-        "lib/net45/SuperSocket.Common.dll",
-        "lib/net45/SuperSocket.Facility.XML",
-        "lib/net45/SuperSocket.Facility.dll",
-        "lib/net45/SuperSocket.SocketBase.XML",
-        "lib/net45/SuperSocket.SocketBase.dll",
-        "supersocket.1.6.6.1.nupkg.sha512",
-        "supersocket.nuspec"
-      ]
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net5.0": [
-      "SuperSocket >= 1.6.6.1"
-    ]
+    "net5.0": []
   },
   "packageFolders": {
     "C:\\Users\\Ception\\.nuget\\packages\\": {}
@@ -128,12 +45,6 @@
     "frameworks": {
       "net5.0": {
         "targetAlias": "net5.0",
-        "dependencies": {
-          "SuperSocket": {
-            "target": "Package",
-            "version": "[1.6.6.1, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",
@@ -152,27 +63,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'log4net 2.0.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
-      "libraryId": "log4net",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'SuperSocket 1.6.6.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
-      "libraryId": "SuperSocket",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    }
-  ]
+  }
 }
