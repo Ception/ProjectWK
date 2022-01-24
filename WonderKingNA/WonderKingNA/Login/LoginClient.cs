@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace WonderKingNA.Login {
-    internal class LoginServer {
-        
+    internal class LoginClient {
     }
 }

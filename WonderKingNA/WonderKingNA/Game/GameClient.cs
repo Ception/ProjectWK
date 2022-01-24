@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WonderKingNA.Login {
-    internal class LoginServer {
-        
+namespace WonderKingNA.Game {
+    internal class GameClient {
     }
 }
