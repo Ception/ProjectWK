@@ -5,6 +5,7 @@ using System.IO;
 namespace WonderKingNA.Tools {
     internal class Settings {
 
+        // Default values in Settings.ini
         private const string filePath =         @".\settings.ini";
         private const string databaseServer =   "localhost";
         private const string databaseName =     "wonderkingna";
@@ -13,6 +14,7 @@ namespace WonderKingNA.Tools {
         private const string serverIP =         "localhost";
         private const int loginServerPort =     10001;
         private const int gameServerPort =      10002;
+        private const int connectionsAllowed = 5;
 
         public Settings() {
             // If file is empty, THEN initilize.
@@ -40,6 +42,7 @@ namespace WonderKingNA.Tools {
             ini.Write("GAME", "Server_IP", serverIP);
             ini.Write("GAME", "Login_Port", loginServerPort);
             ini.Write("GAME", "Game_Port", gameServerPort);
+            ini.Write("GAME", "Connections_Allowed", connectionsAllowed);
         }
 
         public string GetDatabaseServerIP {
@@ -68,6 +71,10 @@ namespace WonderKingNA.Tools {
 
         public int GetGamePort {
             get { return Convert.ToInt32(ini.Read("GAME", "Game_Port")); }
+        }
+        
+        public int GetGameAconnectionsAllowed {
+            get { return Convert.ToInt32(ini.Read("GAME", "Connections_Allowed")); }
         }
     }
 }

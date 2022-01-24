@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    ".NETFramework,Version=v4.8": {
+    "net5.0": {
       "log4net/2.0.3": {
         "type": "package",
         "compile": {
@@ -16,39 +16,6 @@
         "dependencies": {
           "log4net": "2.0.3"
         },
-        "frameworkAssemblies": [
-          "System.Configuration"
-        ],
-        "compile": {
-          "lib/net45/SuperSocket.Common.dll": {},
-          "lib/net45/SuperSocket.Facility.dll": {},
-          "lib/net45/SuperSocket.SocketBase.dll": {}
-        },
-        "runtime": {
-          "lib/net45/SuperSocket.Common.dll": {},
-          "lib/net45/SuperSocket.Facility.dll": {},
-          "lib/net45/SuperSocket.SocketBase.dll": {}
-        }
-      }
-    },
-    ".NETFramework,Version=v4.8/win7-x86": {
-      "log4net/2.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-full/log4net.dll": {}
-        },
-        "runtime": {
-          "lib/net40-full/log4net.dll": {}
-        }
-      },
-      "SuperSocket/1.6.6.1": {
-        "type": "package",
-        "dependencies": {
-          "log4net": "2.0.3"
-        },
-        "frameworkAssemblies": [
-          "System.Configuration"
-        ],
         "compile": {
           "lib/net45/SuperSocket.Common.dll": {},
           "lib/net45/SuperSocket.Facility.dll": {},
@@ -119,7 +86,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    ".NETFramework,Version=v4.8": [
+    "net5.0": [
       "SuperSocket >= 1.6.6.1"
     ]
   },
@@ -140,15 +107,15 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net48"
+        "net5.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net48": {
-          "targetAlias": "net48",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "projectReferences": {}
         }
       },
@@ -159,21 +126,53 @@
       }
     },
     "frameworks": {
-      "net48": {
-        "targetAlias": "net48",
+      "net5.0": {
+        "targetAlias": "net5.0",
         "dependencies": {
           "SuperSocket": {
             "target": "Package",
             "version": "[1.6.6.1, )"
           }
         },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
-    },
-    "runtimes": {
-      "win7-x86": {
-        "#import": []
-      }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'log4net 2.0.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "log4net",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SuperSocket 1.6.6.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "SuperSocket",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

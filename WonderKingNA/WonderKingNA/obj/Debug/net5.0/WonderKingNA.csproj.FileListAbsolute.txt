@@ -5,6 +5,10 @@ C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKi
 C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\bin\Debug\net5.0\WonderKingNA.dll
 C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\bin\Debug\net5.0\ref\WonderKingNA.dll
 C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\bin\Debug\net5.0\WonderKingNA.pdb
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\bin\Debug\net5.0\log4net.dll
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\bin\Debug\net5.0\SuperSocket.Common.dll
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\bin\Debug\net5.0\SuperSocket.Facility.dll
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\bin\Debug\net5.0\SuperSocket.SocketBase.dll
 C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\bin\Debug\net5.0\MySql.Data.dll
 C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\bin\Debug\net5.0\Google.Protobuf.dll
 C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\bin\Debug\net5.0\ZstdNet.dll

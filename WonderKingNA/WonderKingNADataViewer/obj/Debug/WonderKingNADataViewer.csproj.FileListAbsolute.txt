@@ -1,7 +1,6 @@
 C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNADataViewer\bin\Debug\WonderKingNADataViewer.exe.config
 C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNADataViewer\bin\Debug\WonderKingNADataViewer.exe
 C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNADataViewer\bin\Debug\WonderKingNADataViewer.pdb
-C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNADataViewer\obj\Debug\WonderKingNADataViewer.csproj.AssemblyReference.cache
 C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNADataViewer\obj\Debug\WonderKingNADataViewer.csproj.SuggestedBindingRedirects.cache
 C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNADataViewer\obj\Debug\WonderKingNADataViewer.DataViewerForm.resources
 C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNADataViewer\obj\Debug\WonderKingNADataViewer.Properties.Resources.resources

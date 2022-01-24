@@ -1,0 +1,7 @@
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\obj\Debug\net48\WonderKingNA.csproj.AssemblyReference.cache
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\obj\Debug\net48\WonderKingNA.csproj.SuggestedBindingRedirects.cache
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\obj\Debug\net48\WonderKingNA.exe.config
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\obj\Debug\net48\WonderKingNA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\obj\Debug\net48\WonderKingNA.AssemblyInfoInputs.cache
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\obj\Debug\net48\WonderKingNA.AssemblyInfo.cs
+C:\Users\Ception\Documents\MEGA\Development\WonderKing\WonderKingCollab\WonderKingNA\WonderKingNA\obj\Debug\net48\WonderKingNA.csproj.CoreCompileInputs.cache

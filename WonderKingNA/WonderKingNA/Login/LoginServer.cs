@@ -1,14 +1,15 @@
 ﻿using System;
+using System.Net;
 using System.Net.Sockets;
 using WonderKingNA.Tools;
 
 namespace WonderKingNA.Login {
     internal class LoginServer {
-        private LoginInfo loginInfo;
-        public Socket loginSocket;
-        private int loginPort;
         private string loginIP;
-        private string RegisteredCharacterName;
+        private int loginPort;
+        private int loginConnections;
+        private LoginInfo loginInfo;
+        private Socket loginSocket;
 
         public LoginServer() {
             Init();
@@ -20,12 +21,25 @@ namespace WonderKingNA.Login {
             try {
                 this.loginIP = s.GetDatabaseServerIP;
                 this.loginPort = s.GetLoginPort;
+                this.loginConnections = s.GetGameAconnectionsAllowed;
                 this.loginInfo = new LoginInfo();
+                this.loginSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                this.loginSocket.NoDelay = true;
+                this.loginSocket.Bind(new IPEndPoint(IPAddress.Parse(loginIP), loginPort));
+                this.loginSocket.Listen(loginConnections);
+                this.loginSocket.BeginAccept(OnClientConnect, null);
 
                 Log.ConsoleMessage("[LOGIN_SERVER] \tSUCCESS: Initialized.");
-            } catch (Exception e) {
-                Log.ConsoleError($"[LOGIN_SERVER] \tERROR: Failed to Initialize.\n\n[ERROR]:\t{e}");
+            } catch (Exception ex) {
+                Log.ConsoleError("[LOGIN_SERVER] \tERROR: Failed to Initialize.");
+                Log.ConsoleError($"[LOGIN_SERVER_ERROR] \t{ex}");
+                return;
             }
+        }
+
+        private void OnClientConnect(IAsyncResult result) {
+            Socket socket = loginSocket.EndAccept(result);
+            loginSocket.BeginAccept(OnClientConnect, null);
         }
     }
 }
