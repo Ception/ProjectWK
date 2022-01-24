@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Fx2gZJKTVZU/TMCtqFu8DXJ5ISch+PMXm7k0Hrzm6o3LCT2fMt+0CQPkvOGlISI8xlNRwt6kx2MaDMlv8BD7Ag==",
+  "dgSpecHash": "1BRGP3P1FzTnU0a1EZfVBwId/5fhKl+SAtkmY8q6C4Ldm05htlhtqzfiuHSsIMPWoojmi3AjrekJmxJzD+2M8g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ception\\Documents\\MEGA\\Development\\WonderKing\\WonderKingCollab\\WonderKingNA\\WonderKingNA\\WonderKingNA.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Ception\\.nuget\\packages\\log4net\\2.0.3\\log4net.2.0.3.nupkg.sha512",
+    "C:\\Users\\Ception\\.nuget\\packages\\supersocket\\1.6.6.1\\supersocket.1.6.6.1.nupkg.sha512"
+  ],
   "logs": []
 }

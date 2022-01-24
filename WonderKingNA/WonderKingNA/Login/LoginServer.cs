@@ -1,14 +1,16 @@
 ﻿using System;
+using System.Net.Sockets;
 using WonderKingNA.Tools;
 
 namespace WonderKingNA.Login {
-    internal class LoginClient {
+    internal class LoginServer {
         private LoginInfo loginInfo;
+        public Socket loginSocket;
         private int loginPort;
         private string loginIP;
         private string RegisteredCharacterName;
 
-        public LoginClient() {
+        public LoginServer() {
             Init();
         }
 

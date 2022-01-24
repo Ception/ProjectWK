@@ -9,7 +9,7 @@ namespace WonderKingNA {
         public void Run() {
             new AES();
             new Database();
-            new LoginClient();
+            new LoginServer();
 
             Console.ReadKey();
         }
