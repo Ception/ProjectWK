@@ -1,4 +1,5 @@
 ﻿using System;
+using WonderKingNA.Login;
 using WonderKingNA.Network;
 using WonderKingNA.Tools;
 
@@ -8,6 +9,7 @@ namespace WonderKingNA {
         public void Run() {
             new AES();
             new Database();
+            new LoginClient();
 
             Console.ReadKey();
         }

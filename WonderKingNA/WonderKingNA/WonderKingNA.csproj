@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <StartupObject>WonderKingNA.Start</StartupObject>
+    <StartupObject>WonderKingNA.StartClass</StartupObject>
     <ApplicationIcon>imgs\WonderKing.ico</ApplicationIcon>
     <IsPublishable>False</IsPublishable>
     <Authors>Ception, Steelflex</Authors>
@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Game\Handlers\" />
     <Folder Include="Network\Handlers\" />
   </ItemGroup>
 

@@ -5,7 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace WonderKingNA.Login {
-    internal class LoginServer {
-        
+    internal class LoginInfo {
+        public int ID;
+        public string Username;
+        public string Password;
+        public string IP;
     }
 }

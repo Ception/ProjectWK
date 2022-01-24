@@ -29,5 +29,11 @@ namespace WonderKingNA.Player {
         private short Defense;
         private short HitRate;
         private short Evasion;
+
+        public Player() {
+            Init();
+        }
+
+        private void Init() { }
     }
 }

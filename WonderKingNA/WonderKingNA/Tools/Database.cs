@@ -15,7 +15,7 @@ namespace WonderKingNA.Tools {
             Init();
         }
 
-        public void Init() {
+        private void Init() {
             Settings s = new Settings();
 
             this.server = s.GetDatabaseServerIP;
@@ -23,14 +23,22 @@ namespace WonderKingNA.Tools {
             this.username = s.GetDatabaseUsername;
             this.password = s.GetDatabasePassword;
 
-            this.connectionString =   $"SERVER={server};"
+            this.connectionString = $"SERVER={server};"
                                     + $"DATABASE={databaseName};"
                                     + $"UID={username};"
                                     + $"PASSWORD={password};";
 
             conn = new MySqlConnection(connectionString);
             OpenConnection();
+
+            bool isOpen = Convert.ToBoolean(conn.State);
+            if (isOpen) {
+                Log.ConsoleMessage("[DATABASE] \tSUCCESS: Initialized.");
+            } else {
+                Log.ConsoleError("[DATABASE] \tERROR: Failed to Initialize.");
+            }
         }
+
 
         private bool OpenConnection() {
             try {
@@ -48,11 +56,6 @@ namespace WonderKingNA.Tools {
                         break;
                 }
                 return false;
-            } finally {
-                bool isOpen = Convert.ToBoolean(conn.State);
-                if (isOpen) {
-                    Log.ConsoleMessage("[DATABASE] \tSUCCESS: Initialized.");
-                }
             }
         }
     }
