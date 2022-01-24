@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WonderKingNA.Network.Handlers;
 
 namespace WonderKingNA.Network {
     internal class EndianWriter {
@@ -34,6 +35,11 @@ namespace WonderKingNA.Network {
 
         public int Length() {
             return (int)ms.Length;
+        }
+
+        public void AddHeader(Enum header) {
+            PacketHandler ph = new PacketHandler();
+            ph.AddInt16((short)(int)(object)header);
         }
 
         public void Write(byte[] b) {
@@ -76,7 +82,7 @@ namespace WonderKingNA.Network {
             Write(b);
         }
 
-        public void writeAsciiString(string s, int length) {
+        public void WriteAsciiString(string s, int length) {
             if (s.Length > length) {
                 throw new Exception($"name cannot be longer than [{length}] chars.");
             }

@@ -6,25 +6,27 @@ using System.Threading.Tasks;
 
 namespace WonderKingNA.Network {
     internal static class PacketOpcodes {
-        public static readonly int id;
+
         public enum LoginReponse {
+            Login_Response,
             Ok,
-            CharacterSelect,
-            AccountNotExist,
-            IncorrectPassword,
+            Character_Select,
+            Character_Name_Check,
+            Account_No_Exist,
+            Incorrect_Password,
             Error,
-            DuplicateConnection,
+            Duplicate_Connection,
             Suspended,
-            PleaseRegister,
-            Suspended2,
-            EmailVerification,
-            NotCBTAccount,
-            ServerInternalError,
-            PaymentIssue,
-            UserDeleted,
-            NotMoreTries,
+            Please_Register,
+            Suspended_2,
+            Character_Delete,
+            Email_Verification,
+            Server_Internal_Error,
+            Payment_Issue,
+            User_Deleted,
+            No_More_Tries,
             Nothing,
-            AlreadyExists,
+            Already_Exists,
             Incorrect
         }
     }
