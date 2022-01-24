@@ -7,11 +7,11 @@ namespace WonderKingNA.Tools {
 
         // Default values in Settings.ini
         private const string filePath =         @".\settings.ini";
-        private const string databaseServer =   "localhost";
+        private const string databaseServer =   "127.0.0.1";
         private const string databaseName =     "wonderkingna";
         private const string databaseUsername = "root";
         private const string databasePassword = "root";
-        private const string serverIP =         "localhost";
+        private const string serverIP =         "127.0.0.1";
         private const int loginServerPort =     10001;
         private const int gameServerPort =      10002;
         private const int connectionsAllowed =  5;

@@ -19,7 +19,7 @@ namespace WonderKingNA.Login {
             Settings s = new Settings();
 
             try {
-                this.loginIP = s.GetDatabaseServerIP;
+                this.loginIP = s.GetServerIP;
                 this.loginPort = s.GetLoginPort;
                 this.loginConnections = s.GetGameAconnectionsAllowed;
                 this.loginInfo = new LoginInfo();
