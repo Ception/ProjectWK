@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 namespace WonderKingNA.Network {
     internal class EndianWriter {
         private static readonly string CODEPAGE = "Windows-1252";
+        private int size;
         private MemoryStream ms;
 
         public EndianWriter() {
-            
+            this.size = 32;
         }
 
         public EndianWriter(int size) {
