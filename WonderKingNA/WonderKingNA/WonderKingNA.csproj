@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Game\Handlers\" />
     <Folder Include="Network\Handlers\" />
   </ItemGroup>
 

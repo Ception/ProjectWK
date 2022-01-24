@@ -2,7 +2,7 @@
 using WonderKingNA.Tools;
 
 namespace WonderKingNA {
-    internal class Start {
+    internal class StartClass {
 
         static void Main() {
             Console.Title = "Wonderking Online MMORPG - North America";
